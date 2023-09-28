@@ -1,4 +1,9 @@
 @font-face {
+    font-family: Sang bleu-regular;
+    src: url(./Fontes/SangBleu-Sunrise.ttf);
+}
+
+@font-face {
     font-family: Sang bleu-light;
     src: url(./Fontes/SangBleu-Sunrise.ttf);
 }
@@ -21,7 +26,7 @@ body{
 }
 
 h1{
-    font-family: 'Sang bleu-light';
+    font-family: 'Sang bleu-regular';
 }
 nav{
     background-color: rgba(255, 255, 255, 0.021);
@@ -58,5 +63,15 @@ nav ul li a {
 nav ul li a:hover{
     color:#475363;
     border-bottom: 3px solid #12345D;
+}
+
+h2{
+    font-weight: normal;
+    text-align: center;
+    margin-top: 15%;
+    font-style: italic;
+    font-size: 80px;
+    font-family: Sang bleu-light;
+    
 }
 
