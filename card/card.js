@@ -4,7 +4,9 @@ let totalSlides = slider.querySelectorAll(".wrapper .left > div").length - 1;
 
 slider.querySelector(".controls .up").addEventListener("click",function(){
     if(currentSlide == 0){
+        console.log('clicou')
         return;
+        
     }
     currentSlide--;
     slider.querySelector(".wrapper .left div").style.marginTop = `${currentSlide*-100}vh`;
