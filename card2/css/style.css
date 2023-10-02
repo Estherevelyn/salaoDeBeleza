@@ -1,125 +1,26 @@
-@font-face {
-    font-family: Sang bleu-regular;
-    src: url(./Fontes/SangBleu-Sunrise.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500&display=swap');
 
-@font-face {
-    font-family: Sang bleu-light;
-    src: url(./Fontes/SangBleu-Sunrise.ttf);
-}
-*{
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Merriweather Sans', sans-serif;
-    background-image: url(./img/fundo/pexels-polina-tankilevitch-3736314.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center center;
-
-
-
+html,
+body {
+    position: relative;
+    height: 100%;
 }
 
-h2{
-    font-family: 'Sang bleu-regular';
-    font-weight: 400;
-}
-nav{
-    background-color: rgba(255, 255, 255, 0.021);
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: black;
+    margin: 0;
+    padding: 0;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    align-items: center;
-    font-family: 'Sang bleu-light';
-}
-
-nav div {
-    width: 50px;
-
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-family: 'Sang bleu-light';
-    color: #3F3F3F;
-    font-weight: 600;
-    padding: 8px 0;
-    transition: all;
-    transition-duration: 300ms;
-    border-bottom: 1px solid rgba(0, 0, 0, 0);
-
-}
-
-nav ul li a:hover{
-    color:#475363;
-    border-bottom: 3px solid #12345D;
-}
-
-
-/* h1{
-    font-weight: normal;
-    text-align: center;
-    margin-top: 15%;
-    font-style: italic;
-    font-size: 80px;
-    font-family: Sang bleu-light;
-    color: #475363;
-    
-} */
-
-section{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    min-width: 100vh;
-    margin-top: 15%;
-}
-
-h1{
-    font-size: 90px;
-    color: #475363;
-    font-family: Sang bleu-regular;
-    font-weight: normal;
-}
-
-p{
-  font-size: 25px;  
-  color: #12345D;
-  font-weight: 600;
-  font-family: Sang bleu-regular;
-}
-
-
-section .animate {
-    transition: 1s;
-}
-
-.sec-1 .animate {
-    transform: translateX(-100%);
-}
-
-.sec-1.show-animate .animate {
-    transform: translateX(0);
-}
-
-.slider .controls {
-      position: absolute;
-      
-}
-
-/* carrosel */
 .swiper-container {
     width: 100%;
     height: 100%;
@@ -242,5 +143,3 @@ section .animate {
     top: 25%;
     height: 50%;
 }
-
-

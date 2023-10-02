@@ -89,10 +89,10 @@ body{
     object-fit: cover;
 }
 
-/* .slider .wrapper .right div:nth-child(1){
-    margin-top: -400vh;
+.slider .wrapper .right div:nth-child(1){
+    margin-top: -100vh;
 
-} */
+}
 
 
 
