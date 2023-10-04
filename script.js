@@ -1,4 +1,4 @@
-
+// scroll de rolagem do texto 
 let sections = document.querySelectorAll('section');
 window.onscroll = () => {
     sections.forEach(sec => {
@@ -15,6 +15,8 @@ window.onscroll = () => {
     })
 }
 
+// adicionando as variaveis 
+// Carrosel 
 const sliderContainer = document.querySelector('.slider-container');
 
 const slideRight = document.querySelector('.right-slide');
@@ -32,13 +34,15 @@ slideLeft.style.top = `-${(slidesLength -1) * 100}vh`;
 
 //adicionar eventlineart no buttons 
 
-upButton.addEventListener('click', () => changeSlide('up'));
+upButton.addEventListener('click', () => changeSlide('up')); // change é a funçao de ir para cima e para baixo
 downButton.addEventListener('click', () => changeSlide('down'));
 
+
+// adicionando a direcao 
 const changeSlide = (direction) => {
     const sliderHeight = sliderContainer.clientHeight;
-    if(direction == 'up'){
-    activeSlideIndex++;
+    if(direction == 'up'){ //se a direcao for para cima o a imagem devera subir 
+    activeSlideIndex++; 
     if(activeSlideIndex > slidesLength -1){
     activeSlideIndex = 0;
     }
@@ -49,9 +53,10 @@ const changeSlide = (direction) => {
         }
     }
 
-slideRight.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`;
+slideRight.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`; //remover a linha enquanto a outra é adicionada 
 slideLeft.style.transform = `translateY(${activeSlideIndex * sliderHeight}px)`;
 };
 
+// card em loop 
 
 
