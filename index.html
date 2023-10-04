@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Salão de Beleza</title>
 </head>
 <body>
@@ -26,8 +25,44 @@
           <h1 class="animate">Olá, seja bem-vindo ao <i>beauté</i></h1>
           <p class="animate">Aqui você fica mais bonita e confiante</p>
         </section>
-          
-        <script src="script.js"></script>
+        <!-- Carrosel vertical -->
+         <div class="slider-container">
+          <div class="left-slide">
+            <div style="background-color: #7FBF89;">
+              <h3>Nosso Serviços</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores molestias ipsam eveniet. Temporibus, illo quisquam sequi cupiditate tenetur dicta maxime itaque aperiam soluta aliquid, ab adipisci, accusantium ea reiciendis. Esse.</p>
+            </div>
+          <div style="background-color: #3F3F3F;">
+            <h3>Corte de Cabelo</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores molestias ipsam eveniet. Temporibus, illo quisquam sequi cupiditate tenetur dicta maxime itaque aperiam soluta aliquid, ab adipisci, accusantium ea reiciendis. Esse.</p>
+          </div>
+          <div style="background-color: #575F51;">
+            <h3>Hidratação</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores molestias ipsam eveniet. Temporibus, illo quisquam sequi cupiditate tenetur dicta maxime itaque aperiam soluta aliquid, ab adipisci, accusantium ea reiciendis. Esse.</p>
+          </div>
+          <div style="background-color: #A6B695;">
+            <h3>Manicure</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores molestias ipsam eveniet. Temporibus, illo quisquam sequi cupiditate tenetur dicta maxime itaque aperiam soluta aliquid, ab adipisci, accusantium ea reiciendis. Esse.</p>
+          </div>
+        </div>
+          <div class="right-slide">
+            <div style="background-image: url('./img/cometários/NossoServico.jpg');"></div>
+          <div style="background-image: url('./img/cometários/corteDeCabelo.jpg');"></div> 
+          <div style="background-image: url('./img/cometários/hidratacao.jpg');"></div>
+          <div style="background-image: url('./img/cometários/manicure.jpg');"></div>          
+          </div>
+        <div class="action-buttons">
+          <button class="down-button">
+            <i class="fas fa-arrow-down"></i>
+          </button>
+          <button class="up-button">
+            <i class="fas fa-arrow-up"></i>
+          </button>
+        </div>
+         </div>
+
+
+      <script src="script.js"></script>
          
       </main>
   

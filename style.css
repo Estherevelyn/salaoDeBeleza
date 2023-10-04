@@ -7,19 +7,29 @@
     font-family: Sang bleu-light;
     src: url(./Fontes/SangBleu-Sunrise.ttf);
 }
+
+@import url('https://fonts.googleapis.com/css2? family= Black+Han+Sans & family= M+PLUS+Rounded+1c:wght@100;300;400;500;700; 800;900 & família= Maven+Pro:wght@400;500;600;700;800;900 & família= Poppins & família= Russo+One & família= Ultra & display=swap');
+
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+html, body{
+    position: relative;
+    height: 100%
+    
+}
+
 body{
-    font-family: 'Merriweather Sans', sans-serif;
-    background-image: url(./img/fundo/pexels-polina-tankilevitch-3736314.jpg);
+    background-image: url(./img/fundo/pexels-maycon-marmo-4346016.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center center;
+    background-position: center center;  
+;
 
 
 
@@ -85,6 +95,8 @@ section{
     align-items: center;
     min-width: 100vh;
     margin-top: 15%;
+    padding-bottom: 20%;
+
 }
 
 h1{
@@ -101,13 +113,13 @@ p{
   font-family: Sang bleu-regular;
 }
 
-
 section .animate {
     transition: 1s;
 }
 
 .sec-1 .animate {
     transform: translateX(0%);
+    transition: 5s;
 }
 
 .sec-1.show-animate .animate {
@@ -119,5 +131,120 @@ section .animate {
       
 }
 
+/* Carrosel vertical */
 
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+  
+}
 
+.left-slide {
+    height: 100vh;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform .5s ease-in-out;
+}
+
+.left-slide > div {
+   height: 100%;
+   width: 100%; 
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: aliceblue;
+   
+}
+
+.left-slide h3 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+    font-family: 'M PLUS arredondado 1c', sem serifa;
+   font-weight: lighter;
+}
+
+.right-slide {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    
+}
+
+.right-slide > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+.slider-container .action-buttons 
+button {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 100;
+}
+
+.slider-container .action-buttons 
+ .down-button {
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.slider-container .action-buttons 
+ .up-button {
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+button{
+    background-color: #12345D;
+    border: none;
+    color: #475363;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px;
+}
+
+button:hover {
+    color: aquamarine;
+}
+
+button:focus {
+    outline: none;
+}
+
+.image-container {
+    overflow-x: hidden;
+    max-width: 768px;
+}
+.image-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) - 1))) / var(--per-view));
+    grid-gap: 1.5rem;
+    position: relative;
+    left: 0;
+    transition: .3s;
+}
+.image-wrapper > * {
+    aspect-ratio: 4 / 3;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: .5rem;
+}
