@@ -10,6 +10,10 @@
 
 @import url('https://fonts.googleapis.com/css2? family= Black+Han+Sans & family= M+PLUS+Rounded+1c:wght@100;300;400;500;700; 800;900 & família= Maven+Pro:wght@400;500;600;700;800;900 & família= Poppins & família= Russo+One & família= Ultra & display=swap');
 
+@font-face {
+    font-family: ;
+    src: url(./Fontes/M_PLUS_Rounded_1c/MPLUSRounded1c-Light.ttf);
+}
 
 *{
     padding: 0;
@@ -19,7 +23,6 @@
 
 html, body{
     position: relative;
-    height: 100%
     
 }
 
@@ -27,9 +30,9 @@ body{
      background-image: url(./img/fundo/pexels-maycon-marmo-4346016.jpg); 
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center center;
-      
+    height: 100vh;
 
 
 
@@ -93,9 +96,9 @@ section{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    min-width: 100vh;
-    margin-top: 15%;
-    padding-bottom: 20%;
+    min-width: auto;
+    height: 100vh;
+    overflow: hidden;
 
 }
 
@@ -117,6 +120,8 @@ section .animate {
     transition: 1s;
 }
 
+
+
 .sec-1 .animate {
     transform: translateX(0%);
     transition: 5s;
@@ -136,7 +141,7 @@ section .animate {
 .slider-container {
     position: relative;
     overflow: hidden;
-    width: 100vw;
+    width: auto;
     height: 100vh;
   
 }
@@ -249,4 +254,46 @@ img {
 }
 
 /* Card em loop */
+
+.Card {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+
+.image-container {
+    overflow-x: hidden;
+    max-width: 768px;
+   
+
+}
+.image-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) - 1))) / var(--per-view));
+    grid-gap: 1.5rem;
+    position: relative;
+    left: 0;
+    transition: .3s;
+    width: 70em;
+
+}
+.image-wrapper > * {
+    aspect-ratio: 4 / 3;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: .5rem;
+}
+
+.textoCard {
+    font-size: 10px;
+    font-weight: 'M Plus';
+}
+
 
