@@ -11,8 +11,15 @@
 @import url('https://fonts.googleapis.com/css2? family= Black+Han+Sans & family= M+PLUS+Rounded+1c:wght@100;300;400;500;700; 800;900 & família= Maven+Pro:wght@400;500;600;700;800;900 & família= Poppins & família= Russo+One & família= Ultra & display=swap');
 
 @font-face {
-    font-family: ;
+    font-family: Carrosel-Light;
     src: url(./Fontes/M_PLUS_Rounded_1c/MPLUSRounded1c-Light.ttf);
+}
+
+:root {
+    --roxo: #37384C;
+    --marrom: #746469;
+    --cinza: #CAC5C9;
+
 }
 
 *{
@@ -27,7 +34,7 @@ html, body{
 }
 
 body{
-     background-image: url(./img/fundo/pexels-maycon-marmo-4346016.jpg); 
+    background-image: url(./img/fundo/pexels-polina-tankilevitch-3736314.jpg); 
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
@@ -55,6 +62,7 @@ nav ul {
     gap: 2rem;
     align-items: center;
     font-family: 'Sang bleu-light';
+    font-size: 20px;
 }
 
 nav div {
@@ -91,6 +99,7 @@ nav ul li a:hover{
     
 } */
 
+/* Texto principal */
 section{
     display: flex;
     justify-content: center;
@@ -102,33 +111,36 @@ section{
 
 }
 
-h1{
-    font-size: 90px;
+ .sec-1 h1{
     color: #475363;
     font-family: Sang bleu-regular;
     font-weight: normal;
+    font-size: 200px;
+   
+
 }
+    
 
 p{
-  font-size: 25px;  
-  color: #12345D;
-  font-weight: 600;
-  font-family: Sang bleu-regular;
+  font-size: 30px;  
+  color: var(--roxo);
+  font-weight: lighter;
+  font-family: Sang bleu-light;
+  
 }
-
-section .animate {
+ 
+.sec-1 .animate {
     transition: 1s;
-}
-
+} 
 
 
 .sec-1 .animate {
     transform: translateX(0%);
-    transition: 5s;
+
 }
 
 .sec-1.show-animate .animate {
-    transform: translateX(150%);
+    transform: translateX(-150%);
 }
 
 .slider .controls {
@@ -143,6 +155,7 @@ section .animate {
     overflow: hidden;
     width: auto;
     height: 100vh;
+    font-family: Carrosel-Light;
   
 }
 
@@ -213,16 +226,16 @@ button {
 }
 
 button{
-    background-color: #12345D;
+    background-color: #e6e8eb;
     border: none;
-    color: #475363;
+    color: #21202D;
     cursor: pointer;
     font-size: 16px;
     padding: 15px;
 }
 
 button:hover {
-    color: aquamarine;
+    color: #30343F;
 }
 
 button:focus {
@@ -259,6 +272,7 @@ img {
     min-height: 100vh;
     align-items: center;
     justify-content: center;
+    background-color: #B8BFC6;
    
     
 }
@@ -266,6 +280,7 @@ img {
 .image-container {
     overflow-x: hidden;
     max-width: 768px;
+    
    
 
 }
@@ -296,4 +311,80 @@ img {
     font-weight: 'M Plus';
 }
 
+/* footter */
 
+footer {
+    background-color: #CACECE;
+    height: auto;
+    /* width: 100vw; */
+    font-family: 'M Plus';
+    padding-top: 2px;
+    color: aliceblue;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h5 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #746469;
+}
+
+.socials a i {
+    font-size: 1.1rem;
+}
+
+.socials a:hover i{
+    color: #475363;
+}
+
+.footer-bottom{
+    background: #12345D;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
