@@ -3,7 +3,7 @@ let sections = document.querySelectorAll('section');
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
-        let offset = sec.offsetTop -100;
+        let offset = sec.offsetTop +100;
         let height = sec.offsetHeight;
 
         if (top >= offset && top < offset + height) {
@@ -86,3 +86,12 @@ function scrolling() {
   imageWrapper.style.left = `-${totalScroll * widthEl}px`
   imageWrapper.style.transition = '.3s'
 }
+
+const hamburguer = document.querySelector(".hamburguer");
+const navMenu = document.querySelector(".nav-menu");
+
+
+hamburguer.addEventListener("click", () => {
+ hamburguer.classList.toggle("active");
+ navMenu.classList.toggle("active");
+})

@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: Sang bleu-regular;
     src: url(./Fontes/SangBleu-Sunrise.ttf);
@@ -16,9 +17,15 @@
 }
 
 :root {
-    --roxo: #37384C;
+    --roxo: #CAC5C9;;
     --marrom: #746469;
     --cinza: #CAC5C9;
+    --claro: #F1EDE6;
+    --marrom: #EBE3DB;
+    --cinza: #D1C7BD;
+    --bege: #CBAD8D;
+    --marrronEscuro: #A48374;
+    --Preto: #3A2D28;
 
 }
 
@@ -40,23 +47,119 @@ body{
     background-attachment: scroll;
     background-position: center center;
     height: 100vh;
+}
+
+header {
+    /* position: fixed; */
+    width: 100%;
+}
 
 
+li{
+    list-style: none;
+}
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 34px;
+    background-color: rgba(255, 255, 255, 0.021);
+    margin-top: 10px;
+}
+
+.logo{
+    font-family: 'Sang bleu-regular';
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 20px;
+    color: #12345D;
 
 }
 
-h2{
+.nav-menu{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    font-family: 'Sang bleu-regular';
+    font-weight: bold;
+}
+
+.nav-link{
+    transition: 0.5s ease;
+}
+
+.nav-link:hover{
+    color: black;
+}
+
+.hamburguer{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: beige;
+    transition: all 0.3 ease-in-out;
+}
+
+@media (max-width:800px){
+    .hamburguer{
+        display: block;
+    }
+    .hamburguer.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburguer.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+    }
+    .hamburguer.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        border-radius: 0 0 20px 20px;
+        background-color: #CAC5C9;;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+}
+
+
+/* h2{
     font-family: 'Sang bleu-regular';
     font-weight: 400;
 }
-nav{
+.navbar{
     background-color: rgba(255, 255, 255, 0.021);
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
 }
 
-nav ul {
+.navbar .nav-menu {
     display: flex;
     list-style: none;
     gap: 2rem;
@@ -65,12 +168,12 @@ nav ul {
     font-size: 20px;
 }
 
-nav div {
+.navbar div {
     width: 50px;
 
 }
 
-nav ul li a {
+.navbar .nav-menu .nav-item .nav-link {
     text-decoration: none;
     font-family: 'Sang bleu-light';
     color: #3F3F3F;
@@ -82,24 +185,62 @@ nav ul li a {
 
 }
 
-nav ul li a:hover{
+.navbar .nav-menu .nav-item .nav-link:hover{
     color:#475363;
     border-bottom: 3px solid #12345D;
 }
 
+.hamburguer{
+    display: none;
+    cursor: pointer;
+}
 
-/* h1{
-    font-weight: normal;
-    text-align: center;
-    margin-top: 15%;
-    font-style: italic;
-    font-size: 80px;
-    font-family: Sang bleu-light;
-    color: #475363;
-    
+.bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    background-color: beige;
+    transition: all 0.3 ease-in-out;
+}
+
+@media (max-width:800px){
+    .hamburguer{
+        display: block;
+    }
+    .hamburguer.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburguer.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+    }
+    .hamburguer.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        border-radius: 0 0 20px 20px;
+        background-color: #ACBDAA;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
 } */
 
-/* Texto principal */
+/* Main */
+
 section{
     display: flex;
     justify-content: center;
@@ -136,11 +277,12 @@ p{
 
 .sec-1 .animate {
     transform: translateX(0%);
+    transition: 3.0s;
 
 }
 
 .sec-1.show-animate .animate {
-    transform: translateX(-150%);
+    transform: translateX(300%);
 }
 
 .slider .controls {
@@ -279,7 +421,7 @@ img {
 
 .image-container {
     overflow-x: hidden;
-    max-width: 768px;
+    max-width: 1000px;
     
    
 

@@ -18,7 +18,7 @@ body{
     height: 100vh;
 }
 
-.dropdrownmenu{
+nav{
     background-color: rgba(255, 255, 255, 0.021);
     display: flex;
     justify-content: space-between;
@@ -26,7 +26,7 @@ body{
     font-family: "Sang bleu-light";
 }
 
-.dropdrownmenu ul {
+nav ul {
     display: flex;
     list-style: none;
     gap: 2rem;
@@ -35,12 +35,12 @@ body{
     font-size: 20px;
 }
 
-.dropdrownmenu div {
+nav div {
     width: 50px;
 
 }
 
-.dropdrownmenu li:hover a {
+navli:hover a {
     background: #12345D;
 }
 
@@ -59,7 +59,8 @@ h2{
     font-weight: 400;
     font-size: 15px;
 }
-.dropdrownmenu ul li a {
+
+nav ul li a {
     text-decoration: none;
     font-family: 'Sang bleu-light';
     color: #3F3F3F;
@@ -70,7 +71,7 @@ h2{
     border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
 
-.dropdrownmenu ul li a:hover{
+nav ul li a:hover{
     color:#475363;
     border-bottom: 3px solid #12345D;
 }
