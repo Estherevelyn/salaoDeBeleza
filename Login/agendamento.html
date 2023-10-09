@@ -1,11 +1,117 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agendamento</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="agendamento.css"  />
+
+  <title>Cadastro</title>
 </head>
 <body>
     
+  <!-- Menu -->
+  <header>
+    <nav class="navbar">
+       <a class="logo" href="#">Beauté.</a>
+       <ul class="nav-menu">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">Corte de Cabelo</a>
+        <ul class="dropdown">
+         <li><a href="#">Corte Masculino</a></li>
+         <li><a href="#">Corte Feminino</a></li>
+         <li><a href="#">Corte com finalização</a></li>
+         <li><a href="#">Corte com escova</a></li>
+        </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Escova</a>
+        <ul class="dropdown">
+          <li><a href="#">Escova Completa</a></li>
+          <li><a href="#">Escova com hidratação</a></li>
+          <li><a href="#">Escova com progessiva</a></li>
+          <li><a href="#">Escova com penteado</a></li>
+         </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Manicure</a>
+          <ul class="dropdown">
+            <li><a href="#">Unha de gel</a></li>
+            <li><a href="#">mão e pé simples</a></li>
+            <li><a href="#">Manutenção de unha de gel</a></li>
+            <li><a href="#">Remoção de unha de gel</a></li>
+           </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5502/Promo%C3%A7ao/index.html">Promoções</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5502/Login/login.html">Cadastro</a>
+        </li>
+       </ul>    
+         <div class="hamburguer">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+         </div>
+    </nav>
+ </header>
+
+  <div class="container">
+    <section class="header">
+      <h2>Nova conta</h2>
+    </section>
+
+    <form id="form" class="form">
+      <div class="form-content">
+        <label for="username">Nome do usuário</label>
+        <input
+          type="text"
+          id="username"
+          placeholder="Digite o nome do usuario..."
+        />
+        <a>Aqui vai a mensagem de erro....</a>
+      </div>
+
+      <div class="form-content">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Digite o seu email..."
+        />
+        <a>Aqui vai a mensagem de erro....</a>
+      </div>
+
+      <div class="form-content">
+        <label for="password">Senha</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Digite sua senha..."
+        />
+        <a>Aqui vai a mensagem de erro....</a>
+      </div>
+
+      <div class="form-content">
+        <label for="password-confirmation">Confirmação de senha</label>
+        <input
+          type="password"
+          id="password-confirmation"
+          placeholder="Digite sua senha novamente..."
+        />
+        <a>Aqui vai a mensagem de erro....</a>
+      </div>
+
+      <button type="submit">Cadastrar</button>
+
+    </form>
+
+  </div>
+  
+
+  <script src="./script.js"></script>
 </body>
 </html>
