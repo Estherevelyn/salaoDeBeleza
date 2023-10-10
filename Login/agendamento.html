@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="agendamento.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="agendamento.css"  />
-
-  <title>Cadastro</title>
+    <title>Agendamento</title>
 </head>
 <body>
-    
-  <!-- Menu -->
   <header>
     <nav class="navbar">
        <a class="logo" href="http://127.0.0.1:5502/index.html">Beauté.</a>
        <ul class="nav-menu">
-        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5502/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5502/index.html">Home</a>
+          <ul class="dropdown">
+            <li><a href="http://127.0.0.1:5502/sugestoes/sugestao.html">Comentários</a></li>
+            <li><a href="http://127.0.0.1:5502/localizacao/index.html">Localização</a></li>
+           </ul>
+        </li>
         <li class="nav-item">
         <a class="nav-link" href="#">Corte de Cabelo</a>
         <ul class="dropdown">
-         <li><a href="#">Corte Masculino</a></li>
+         <li><a href="http://127.0.0.1:5502/Corte%20de%20Cabelo/index.html">Corte Masculino</a></li>
          <li><a href="#">Corte Feminino</a></li>
          <li><a href="#">Corte com finalização</a></li>
          <li><a href="#">Corte com escova</a></li>
@@ -48,7 +48,8 @@
         </li>
         <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5502/Promo%C3%A7ao/index.html">Promoções</a>
         </li>
-        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5502/Login/login.html">Cadastro</a>
+        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5502/Login/agendamento.html">Agendar</a>
+          
         </li>
        </ul>    
          <div class="hamburguer">
@@ -59,59 +60,33 @@
     </nav>
  </header>
 
-  <div class="container">
-    <section class="header">
-      <h2>Nova conta</h2>
-    </section>
 
-    <form id="form" class="form">
-      <div class="form-content">
-        <label for="username">Nome do usuário</label>
-        <input
-          type="text"
-          id="username"
-          placeholder="Digite o nome do usuario..."
-        />
-        <a>Aqui vai a mensagem de erro....</a>
-      </div>
-
-      <div class="form-content">
-        <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          placeholder="Digite o seu email..."
-        />
-        <a>Aqui vai a mensagem de erro....</a>
-      </div>
-
-      <div class="form-content">
-        <label for="password">Senha</label>
-        <input
-          type="password"
-          id="password"
-          placeholder="Digite sua senha..."
-        />
-        <a>Aqui vai a mensagem de erro....</a>
-      </div>
-
-      <div class="form-content">
-        <label for="password-confirmation">Confirmação de senha</label>
-        <input
-          type="password"
-          id="password-confirmation"
-          placeholder="Digite sua senha novamente..."
-        />
-        <a>Aqui vai a mensagem de erro....</a>
-      </div>
-
-      <button type="submit">Cadastrar</button>
-
-    </form>
-
-  </div>
+   <div class="container">
+    <h1>Agendamento</h1>
+    <form id="appointmentForm">
+      <label for="name">Nome:</label>
+      <input type="text" id="name" name="name" required>
   
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+  
+      <label for="date">Data do Agendamento:</label>
+      <input type="date" id="date" name="date" required>
+  
+      <label for="time">Horário:</label>
+      <input type="time" id="time" name="time" required>
+  
+      <label for="type">Tipo de Agendamento:</label>
+      <select id="type" name="type" required>
+        <option value="corte de cabelo">Corte de cabelo</option>
+        <option value="manicure">Manicure</option>
+        <option value="escova">Escova</option>
+        <option value="outro">Outro</option>
+      </select>
+      <button type="button" onclick="submitForm()">Agendar Consulta</button>
+    </form>
+   </div>
 
-  <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

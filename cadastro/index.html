@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="shortcut icon" href="../ico/Red-Black-Vintage-Fauget-Barbershop-Logo.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <title>Macho's Barbershop | Cadastro</title>
+
+</head>
+<body>
+    <header>
+        <nav data-aos="fade-up" data-aos-delay="300">
+            <a href="../index.html"><img src="../img/Red Black Vintage Fauget Barbershop Logo (2).png" alt="" data-aos="flip-up"
+                data-aos-delay="300" data-duration="1500"></a>
+        </nav>
+    </header>
+
+    <main>
+        <form class="form" data-aos="fade-up" data-aos-delay="150" id="signup-form">
+            <p class="title">Cadastro </p>
+            <p class="message">Cadastre-se agora e tenha acesso total ao nosso aplicativo. </p>
+                <div class="flex">
+                <label>
+                    <input required="" placeholder="" type="text" class="input" id="nome">
+                    <span>Nome</span>
+                </label>
+        
+                <label id="sobrenome">
+                    <input required="" placeholder="" type="text" class="input" id="sobrenome">
+                    <span>Sobrenome</span>
+                </label>
+            </div>  
+                    
+            <label>
+                <input required="" placeholder="" type="email" class="input" id="email">
+                <span>Email</span>
+            </label> 
+                
+            <label>
+                <input required="" placeholder="" type="password" class="input" id="password">
+                <span>Password</span>
+            </label>
+            <label>
+                <input required="" placeholder="" type="password" class="input" id="confirm-password">
+                <span>Confirm password</span>
+            </label>
+            <button class="submit" id="submit-btn">ENTRAR</button>
+            <p class="signin">Já tem uma conta? <a href="">Login</a> </p>
+        </form>
+
+
+
+
+    </main>
+
+    <script src="cadastro.js"></script>
+</body>
+</html>

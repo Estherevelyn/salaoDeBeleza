@@ -1,124 +1,33 @@
-function logar(){
+function submitForm() {
+  var name = document.getElementById('name').value;
+  var email = document.getElementById('email').value;
+  var date = document.getElementById('date').value;
+  var time = document.getElementById('time').value;
+  var type = document.getElementById('type').value;
 
-    var login = document.getElementById('login').value;
-    var senha = document.getElementById('senha').value;
+  // Verificar se algum campo está vazio
+  if (name === '' || email === '' || date === '' || time === '' || type === '') {
+    alert('Por favor, preencha todos os campos.');
+  } else {
+    // Verificar se já há dados salvos no localStorage
+    var savedData = JSON.parse(localStorage.getItem('consultationData')) || [];
 
-    if(login == "admin" && senha == "admin"){
-        alert('Sucesso');
-        location.href = "home.html";
-    }else{
-        alert('Usuario ou senha incorretos');
-    }
+    // Adicionar os novos dados aos dados salvos
+    savedData.push({ name: name, email: email, date: date, time: time, type: type });
 
-}
+    // Salvar os dados no localStorage
+    localStorage.setItem('consultationData', JSON.stringify(savedData));
 
-const form = document.getElementById("form");
-const username = document.getElementById("username")
-const email = document.getElementById("email")
-const password = document.getElementById("password")
-const passwordConfirmation = document.getElementById("password-confirmation");
+    // Limpar os campos do formulário
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('date').value = '';
+    document.getElementById('time').value = '';
+    document.getElementById('type').value = '';
 
+    // Exibe um alerta informando que a consulta foi marcada e salva
+    alert('Consulta de tipo ' + type + ' marcada para ' + date + ' às ' + time + '. Confira seu e-mail (' + email + ') para mais detalhes.');
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  checkForm();
-})
-
-email.addEventListener("blur", () => {
-  checkInputEmail();
-})
-
-
-username.addEventListener("blur", () => {
-  checkInputUsername();
-})
-
-
-function checkInputUsername(){
-  const usernameValue = username.value;
-
-  if(usernameValue === ""){
-    errorInput(username, "Preencha um username!")
-  }else{
-    const formItem = username.parentElement;
-    formItem.className = "form-content"
+    // Pode adicionar aqui lógica adicional, se necessário
   }
-
-}
-
-function checkInputEmail(){
-  const emailValue = email.value;
-
-  if(emailValue === ""){
-    errorInput(email, "O email é obrigatório.")
-  }else{
-    const formItem = email.parentElement;
-    formItem.className = "form-content"
-  }
-
-
-}
-
-
-function checkInputPassword(){
-  const passwordValue = password.value;
-
-  if(passwordValue === ""){
-    errorInput(password, "A senha é obrigatória.")
-  }else if(passwordValue.length < 8){
-    errorInput(password, "A senha precisa ter no mínimo 8 caracteres.")
-  }else{
-    const formItem = password.parentElement;
-    formItem.className = "form-content"
-  }
-
-
-}
-
-
-function checkInputPasswordConfirmation(){
-  const passwordValue = password.value;
-  const confirmationPasswordValue = passwordConfirmation.value;
-
-  if(confirmationPasswordValue === ""){
-    errorInput(passwordConfirmation, "A confirmação de senha é obrigatória.")
-  }else if(confirmationPasswordValue !== passwordValue){
-    errorInput(passwordConfirmation, "As senhas não são iguais.")
-  }else{
-    const formItem = passwordConfirmation.parentElement;
-    formItem.className = "form-content"
-  }
-
-
-}
-
-
-function checkForm(){
-  checkInputUsername();
-  checkInputEmail();
-  checkInputPassword();
-  checkInputPasswordConfirmation();
-
-  const formItems = form.querySelectorAll(".form-content")
-
-  const isValid = [...formItems].every( (item) => {
-    return item.className === "form-content"
-  });
-
-  if(isValid){
-    alert("CADASTRADO COM SUCESSO!")
-  }
-
-}
-
-
-function errorInput(input, message){
-  const formItem = input.parentElement;
-  const textMessage = formItem.querySelector("a")
-
-  textMessage.innerText = message;
-
-  formItem.className = "form-content error"
-
 }

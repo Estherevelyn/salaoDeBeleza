@@ -144,7 +144,7 @@ a{
         left: 0;
         width: 100%;
         background-color: #fff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 5px rgba(41, 13, 13, 0.766);
         z-index: 1;
     }
 
@@ -219,7 +219,7 @@ section {
 }
 
 .sec-1 .animate {
-    transition: 1s;
+     transition: 1s; 
 }
 
 .sec-1 .animate {
@@ -419,6 +419,12 @@ img {
     max-width: 100%;
 }
 
+.image-wrapper small {
+    font-size: 15px;
+    font-family: Sang bleu-light;
+    color: #CAC5C9;
+}
+
 .image-wrapper > * {
     aspect-ratio: 4 / 3;
 }
@@ -445,6 +451,7 @@ img {
 
     .textoCard {
         font-size: 14px;
+    
     }
 }
 

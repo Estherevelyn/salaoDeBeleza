@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Contato com JavaScript</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+     
+    <header>
+      <nav class="navbar">
+         <a class="logo" href="http://127.0.0.1:5502/index.html">Beauté.</a>
+         <ul class="nav-menu">
+          <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5502/index.html">Home</a>
+            <ul class="dropdown">
+              <li><a href="http://127.0.0.1:5502/sugestoes/sugestao.html">Comentários</a></li>
+              <li><a href="http://127.0.0.1:5502/localizacao/index.html">Localização</a></li>
+             </ul>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="#">Corte de Cabelo</a>
+          <ul class="dropdown">
+           <li><a href="http://127.0.0.1:5502/Corte%20de%20Cabelo/index.html">Corte Masculino</a></li>
+           <li><a href="#">Corte Feminino</a></li>
+           <li><a href="#">Corte com finalização</a></li>
+           <li><a href="#">Corte com escova</a></li>
+          </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Escova</a>
+          <ul class="dropdown">
+            <li><a href="#">Escova Completa</a></li>
+            <li><a href="#">Escova com hidratação</a></li>
+            <li><a href="#">Escova com progessiva</a></li>
+            <li><a href="#">Escova com penteado</a></li>
+           </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Manicure</a>
+            <ul class="dropdown">
+              <li><a href="#">Unha de gel</a></li>
+              <li><a href="#">mão e pé simples</a></li>
+              <li><a href="#">Manutenção de unha de gel</a></li>
+              <li><a href="#">Remoção de unha de gel</a></li>
+             </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5502/Promo%C3%A7ao/index.html">Promoções</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5502/Login/agendamento.html">Agendar</a>
+            
+          </li>
+         </ul>    
+           <div class="hamburguer">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+           </div>
+      </nav>
+   </header>
+    
+      <div class="container">
+        <h1>Cometário</h1>
+        <form
+        action="https://formsubmit.co/ajax/esther.e.silva6@senai.aluno.br"
+        method="POST"
+        data-form
+      >
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" required />
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" required />
+        <label for="mensagem">Mensagem</label>
+        <textarea name="mensagem" id="mensagem" required></textarea>
+        <button type="submit" data-button>Enviar</button>
+      </form>
+      </div>
+   
+  </body>
+</html>
