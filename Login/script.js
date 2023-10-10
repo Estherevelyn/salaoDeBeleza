@@ -26,7 +26,7 @@ function submitForm() {
     document.getElementById('type').value = '';
 
     // Exibe um alerta informando que a consulta foi marcada e salva
-    alert('Consulta de tipo ' + type + ' marcada para ' + date + ' às ' + time + '. Confira seu e-mail (' + email + ') para mais detalhes.');
+    alert('Agendamento ' + type + ' marcada para ' + date + ' às ' + time + '. Confira seu e-mail (' + email + ') para mais detalhes.');
 
     // Pode adicionar aqui lógica adicional, se necessário
   }

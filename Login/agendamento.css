@@ -21,7 +21,7 @@ body {
   align-items: center;
   background: #fff;
   background-image: radial-gradient(at 9.2% 73.7%, #A48374 0px, transparent 50%),
-    radial-gradient(at 92.3% 7.6%, #fff9cf 0px, transparent 50%);
+    radial-gradient(at 92.3% 7.6%, #fff9cf 0px, transparent 20%);
   background-repeat: no-repeat;
 }
 
